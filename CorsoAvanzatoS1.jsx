@@ -91,15 +91,15 @@ const SLIDES = [
     data: {
       title: "La sessione di oggi",
       left: {
-        icon: "🔄",
-        heading: "Parte 1 — Contesto",
-        text: "Obiettivi del corso e programma\nRipasso dei concetti chiave\nGli strumenti che useremo\nIl framework AI Fluency (4D)",
-        time: "~40 min",
+        icon: "🧠",
+        heading: "Teoria e metodo",
+        text: "Il Cold Start Problem e l'analogia del supplente\nIl framework AI Fluency (4D)\nLe 6 aree del Documento di Contesto\nIl metodo dell'intervista con l'IA",
+        time: "~30 min",
       },
       right: {
-        icon: "🎯",
-        heading: "Parte 2 — Laboratorio",
-        text: "Il Documento di Contesto Didattico\nL'IA vi intervista (esercitazione)\nRevisione e discussione\nAnteprima della prossima sessione",
+        icon: "🛠️",
+        heading: "Laboratorio pratico",
+        text: "Costruite il vostro Documento di Contesto\nL'IA vi intervista, una domanda alla volta\nTest immediato: prima vs dopo il contesto\nCondivisione e discussione finale",
         time: "~70 min",
       },
     },
@@ -175,6 +175,32 @@ const SLIDES = [
     },
   },
   {
+    id: "cold-start",
+    layout: "centered",
+    part: 2,
+    data: {
+      icon: "🥶",
+      title: "Il Cold Start Problem",
+      body: "Ogni volta che aprite una chat nuova, l'IA non sa nulla di voi.\nNon sa che materia insegnate, che studenti avete, come lavorate.\nÈ come chiamare un supplente che non ha mai visto la vostra classe.",
+      highlight: "Ora immaginate un collega che vi conosce da anni:\nsa i nomi dei vostri studenti difficili, conosce il vostro metodo,\ncapisce al volo cosa intendete quando dite «verifica leggera».\n\nIl Documento di Contesto Didattico trasforma il supplente in quel collega.\nOgni conversazione parte da lì, non più da zero.",
+    },
+  },
+  {
+    id: "system-prompt",
+    layout: "bullets",
+    part: 2,
+    data: {
+      title: "Come funziona tecnicamente?",
+      subtitle: "Il concetto di Custom Instructions / System Prompt — in parole semplici",
+      items: [
+        "Ogni strumento IA ha un campo dove potete incollare un testo che viene letto PRIMA di ogni vostra domanda. In Claude si chiama «System Prompt», in ChatGPT «Custom Instructions», in Gemini «Gems». Stesso concetto, nomi diversi.",
+        "È come dare un briefing a un nuovo collaboratore il primo giorno: chi siete, come lavorate, cosa vi aspettate. Lo fate una volta, e da quel momento ogni risposta è calibrata su di voi.",
+        "Il Documento di Contesto Didattico che costruirete oggi è esattamente questo briefing: un testo strutturato che trasforma un'IA generica nel vostro assistente personale.",
+        "Non è magia, è ingegneria del contesto. Più il documento è preciso e autentico, più l'IA lavora come se vi conoscesse da sempre.",
+      ],
+    },
+  },
+  {
     id: "framework4d",
     layout: "framework",
     part: 2,
@@ -228,6 +254,22 @@ const SLIDES = [
     },
   },
   {
+    id: "sei-aree",
+    layout: "grid6",
+    part: 2,
+    data: {
+      title: "Le 6 aree del Documento di Contesto",
+      items: [
+        { num: "01", label: "Scheda\nRapida", desc: "Chi sei: materia, ordine di scuola, anni di esperienza, classi attuali. Il biglietto da visita essenziale." },
+        { num: "02", label: "Profilo\nStudenti", desc: "Chi sono i tuoi studenti: livello, difficoltà tipiche, punti di forza, dinamiche di classe da conoscere." },
+        { num: "03", label: "Filosofia\nEducativa", desc: "Come insegni: metodi preferiti, valori pedagogici, cosa funziona e cosa no nella tua esperienza." },
+        { num: "04", label: "Vincoli\nOperativi", desc: "Con cosa fai i conti: ore disponibili, risorse, tecnologia in aula, programmazione da rispettare." },
+        { num: "05", label: "Obiettivi\nIA", desc: "Cosa vuoi dall'IA: quali compiti delegare, quali mai, dove serve più aiuto, dove meno." },
+        { num: "06", label: "Istruzioni\nOperative", desc: "Come deve comportarsi l'IA: tono, formato, lunghezza, lingua, cosa evitare, cosa privilegiare." },
+      ],
+    },
+  },
+  {
     id: "intervista",
     layout: "centered",
     part: 2,
@@ -252,14 +294,12 @@ const SLIDES = [
     layout: "steps",
     part: 2,
     data: {
-      title: "Come funziona l'esercitazione",
+      title: "Le 4 fasi dell'esercitazione",
       steps: [
-        { num: "1", text: "Aprite il vostro strumento IA preferito (ChatGPT, Gemini o Claude)" },
-        { num: "2", text: "Incollate il prompt che vi darò — ne ho preparato una versione per Claude e una per ChatGPT" },
-        { num: "3", text: "Lasciatevi intervistare: l'IA vi farà una domanda alla volta, con calma" },
-        { num: "4", text: "Rispondete con onestà. Se una domanda vi mette in difficoltà, è un buon segno: state scavando" },
-        { num: "5", text: "Alla fine l'IA sintetizzerà tutto in un Documento di Contesto strutturato" },
-        { num: "6", text: "Rileggete con occhio critico (Discernimento!) e correggete ciò che non vi rappresenta" },
+        { num: "A", text: "Setup (5 min) — Aprite Claude, ChatGPT o Gemini e incollate il prompt di intervista che vi fornisco" },
+        { num: "B", text: "Intervista (35 min) — L'IA vi fa una domanda alla volta. Rispondete con calma e onestà. Giro tra i banchi per aiutare chi si blocca" },
+        { num: "C", text: "Sintesi (10 min) — L'IA genera il Documento. Rileggetelo con occhio critico: è VOSTRO, correggete tutto ciò che non vi rappresenta" },
+        { num: "D", text: "Test dal vivo (10 min) — Usate il Documento come contesto e chiedete: «Prepara un'attività per la mia prossima lezione». Confrontate il prima e il dopo." },
       ],
     },
   },
@@ -317,7 +357,32 @@ const SLIDES = [
     data: {
       label: "HANDS-ON",
       title: "È il vostro turno",
-      subtitle: "45 minuti · Aprite il vostro strumento · Incollate il prompt · Lasciatevi guidare dall'intervista",
+      subtitle: "60 minuti · Fase A: setup · Fase B: intervista · Fase C: sintesi e revisione · Fase D: test prima/dopo",
+    },
+  },
+  {
+    id: "condivisione",
+    layout: "centered",
+    part: 2,
+    data: {
+      icon: "🎤",
+      title: "Condivisione",
+      body: "2-3 volontari ci mostrano il loro Documento di Contesto\ne il risultato del test «prima vs dopo».\n\nNon cerchiamo la perfezione: cerchiamo spunti.\nOgni documento è diverso perché ogni docente è diverso.\nQuesto è esattamente il punto.",
+      highlight: "Domande guida:\n— Cosa ti ha sorpreso delle domande dell'IA?\n— C'è qualcosa che non avevi mai esplicitato prima?\n— Come è cambiato l'output con il contesto?",
+    },
+  },
+  {
+    id: "documento-vivo",
+    layout: "bullets",
+    part: 2,
+    data: {
+      title: "Il Documento è vivo",
+      subtitle: "Non è un compito da fare e dimenticare — è uno strumento che cresce con voi",
+      items: [
+        "Dove incollarlo: nelle Custom Instructions di ChatGPT, nel System Prompt di Claude (Progetti), nelle Gems di Gemini. Una volta sola, e ogni conversazione parte da lì.",
+        "Quando aggiornarlo: cambio di classe, nuovo progetto, cambio di metodo didattico, fine quadrimestre. Ogni volta che qualcosa di significativo cambia nella vostra pratica.",
+        "Cosa viene dopo: nelle prossime sessioni userete questo documento come base per costruire agenti personalizzati, pipeline automatizzate e tutor socratici calibrati sui vostri studenti.",
+      ],
     },
   },
   {
@@ -326,12 +391,12 @@ const SLIDES = [
     part: 2,
     data: {
       title: "Cosa portate a casa oggi",
-      subtitle: "Tre cose concrete dalla sessione di oggi",
+      subtitle: "Quattro cose concrete dalla sessione di oggi",
       items: [
-        "Il vostro Documento di Contesto Didattico personale — un artefatto riutilizzabile che potete incollare all'inizio di ogni conversazione con l'IA per ottenere risposte calibrate su di voi",
-        "Il framework AI Fluency (le 4D) come metodo per strutturare ogni interazione con l'IA: Delega consapevole, Descrizione ricca, Discernimento critico, Diligenza responsabile",
-        "L'esperienza diretta dell'IA come strumento di auto-riflessione professionale: non solo risposte, ma domande che vi aiutano a chiarire la vostra pratica",
-        "Anticipazione: la prossima volta (15 aprile) passiamo dal chiedere al costruire. Vibe coding, artefatti, strumenti su misura generati dall'IA. Portate un'idea di qualcosa che vi piacerebbe avere!",
+        "Il vostro Documento di Contesto Didattico — da incollare subito nelle Custom Instructions del vostro strumento IA preferito. Da oggi ogni conversazione parte da chi siete davvero.",
+        "Il framework AI Fluency (4D) come bussola: Delega consapevole, Descrizione ricca, Discernimento critico, Diligenza responsabile. Un metodo, non una lista di trucchi.",
+        "L'esperienza del metodo dell'intervista: l'IA non è solo uno strumento che risponde, è uno specchio che vi aiuta a chiarire la vostra pratica. Usatelo anche per altri scopi.",
+        "Prossima sessione (15 aprile): dal chiedere al costruire. Vibe coding, artefatti interattivi, strumenti su misura. Portate un'idea di qualcosa che vi piacerebbe avere per le vostre lezioni!",
       ],
     },
   },
@@ -458,6 +523,46 @@ function Grid4Slide({ data }) {
               fontFamily: FONT.body, fontSize: "1rem",
               color: item.active ? `${C.white}cc` : C.grayDark,
               margin: 0, lineHeight: 1.5,
+            }}>{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Grid6Slide({ data }) {
+  return (
+    <div style={{
+      height: "100%", display: "flex", flexDirection: "column",
+      padding: "28px 44px", background: C.cream,
+    }}>
+      <h2 style={{
+        fontFamily: FONT.display, fontSize: "clamp(1.8rem, 3vw, 2.4rem)",
+        color: C.navy, margin: "0 0 16px", fontWeight: 700,
+      }}>{data.title}</h2>
+      <div style={{
+        display: "grid", gridTemplateColumns: "1fr 1fr 1fr",
+        gap: 10, flex: 1,
+      }}>
+        {data.items.map((item, i) => (
+          <div key={i} style={{
+            background: C.white, borderRadius: 14, padding: "18px 20px",
+            border: `1px solid ${C.navy}12`,
+            display: "flex", flexDirection: "column",
+          }}>
+            <span style={{
+              fontFamily: FONT.mono, fontSize: "0.7rem",
+              color: C.orange, fontWeight: 600, marginBottom: 4,
+            }}>{item.num}</span>
+            <h3 style={{
+              fontFamily: FONT.display, fontSize: "1.15rem",
+              color: C.navy, margin: "0 0 6px", fontWeight: 700,
+              whiteSpace: "pre-line", lineHeight: 1.25,
+            }}>{item.label}</h3>
+            <p style={{
+              fontFamily: FONT.body, fontSize: "0.95rem",
+              color: C.grayDark, margin: 0, lineHeight: 1.45,
             }}>{item.desc}</p>
           </div>
         ))}
@@ -888,6 +993,7 @@ function SlideContent({ slide }) {
     title: TitleSlide,
     centered: CenteredSlide,
     grid4: Grid4Slide,
+    grid6: Grid6Slide,
     split: SplitSlide,
     bullets: BulletsSlide,
     transition: TransitionSlide,
