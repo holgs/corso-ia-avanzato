@@ -1027,10 +1027,27 @@ function SlideRenderer({ slide }) {
   return Comp ? <Comp slide={slide} /> : <div>Unknown slide type: {slide.type}</div>;
 }
 
+
+/* ─── Scale-to-fit: la slide è sempre 1280×720 e viene scalata ─── */
+function useSlideScale(reservedH = 51) {
+  const [scale, setScale] = useState(1);
+  useEffect(() => {
+    const update = () => {
+      const avW = window.innerWidth;
+      const avH = window.innerHeight - reservedH;
+      setScale(Math.min(avW / 1280, avH / 720));
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, [reservedH]);
+  return scale;
+}
 /* ─── MAIN APP ─── */
 
 export default function CorsoIAAvanzato({ initialLesson = null, onBack }) {
   const [lecture, setLecture] = useState(initialLesson); // null = menu, 2 or 3
+  const scale = useSlideScale(52); // bottom bar ~52px
   const [slideIndex, setSlideIndex] = useState(0);
 
   const slides = lecture === 2 ? LEZIONE_2 : lecture === 3 ? LEZIONE_3 : [];
@@ -1129,14 +1146,16 @@ export default function CorsoIAAvanzato({ initialLesson = null, onBack }) {
       width: "100vw", height: "100vh",
       background: C.dark, display: "flex", flexDirection: "column",
     }}>
-      {/* Slide area */}
+      {/* Slide area — scale-to-fit 1280×720 */}
       <div style={{
-        flex: 1, display: "flex", justifyContent: "center", alignItems: "center",
-        padding: "1rem",
+        flex: 1, display: "flex", alignItems: "center", justifyContent: "center",
+        overflow: "hidden",
       }}>
         <div style={{
-          width: "min(95vw, 1200px)",
-          height: "min(85vh, 675px)",
+          width: 1280, height: 720,
+          transform: `scale(${scale})`,
+          transformOrigin: "center center",
+          flexShrink: 0,
           borderRadius: "0.75rem",
           overflow: "hidden",
           boxShadow: "0 8px 40px rgba(0,0,0,0.4)",

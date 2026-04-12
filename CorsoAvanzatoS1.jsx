@@ -866,6 +866,22 @@ function PromptSlide({ data }) {
   );
 }
 
+
+/* ─── Scale-to-fit: la slide è sempre 1280×720 e viene scalata ─── */
+function useSlideScale(reservedH = 51) {
+  const [scale, setScale] = useState(1);
+  useEffect(() => {
+    const update = () => {
+      const avW = window.innerWidth;
+      const avH = window.innerHeight - reservedH;
+      setScale(Math.min(avW / 1280, avH / 720));
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, [reservedH]);
+  return scale;
+}
 // ─── Layout Router ───
 function SlideContent({ slide }) {
   const L = {
@@ -907,6 +923,7 @@ export default function CorsoAvanzatoS1({ onBack }) {
     return () => window.removeEventListener("keydown", handler);
   }, [go, total]);
 
+  const scale = useSlideScale(51); // 3px progressbar + 48px bottombar
   const slide = SLIDES[current];
   const progress = ((current + 1) / total) * 100;
 
@@ -926,14 +943,17 @@ export default function CorsoAvanzatoS1({ onBack }) {
         }} />
       </div>
 
-      {/* Slide area */}
+      {/* Slide area — scale-to-fit 1280×720 */}
       <div style={{
-        flex: 1, position: "relative", overflow: "hidden",
-        margin: "0 auto", width: "100%", maxWidth: "100%",
+        flex: 1, display: "flex", alignItems: "center", justifyContent: "center",
+        overflow: "hidden", background: "#0d1929",
       }}>
         <div style={{
-          position: "absolute", inset: 0,
-          transition: "opacity 0.25s ease",
+          width: 1280, height: 720,
+          transform: `scale(${scale})`,
+          transformOrigin: "center center",
+          flexShrink: 0,
+          overflow: "hidden",
         }}>
           <SlideContent slide={slide} />
         </div>
