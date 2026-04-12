@@ -139,10 +139,10 @@ const SLIDES = [
       tools: [
         { name: "Claude", desc: "Ragionamento profondo, scrittura lunga, analisi critica. Eccellente per progettazione didattica e feedback strutturato", color: "#d97706" },
         { name: "Gemini", desc: "Integrazione nativa con Google (Docs, Sheets, Drive). Canvas per generare codice e artefatti visivi", color: "#4285f4" },
-        { name: "ChatGPT", desc: "Il piu diffuso tra voi. Versatile, con GPT Store e generazione immagini. Canvas per codice e testi", color: "#10a37f" },
-        { name: "Perplexity", desc: "Motore di ricerca potenziato dall'IA. Ideale per fact-checking e ricerca con fonti citate", color: "#7c3aed" },
+        { name: "ChatGPT", desc: "Il più diffuso tra voi. Versatile, con GPT Store e generazione immagini. Canvas per codice e testi", color: "#10a37f" },
+        { name: "NotebookLM", desc: "Il tuo taccuino intelligente di Google. Carica PDF, slide e documenti, poi interrogali. Genera riassunti audio dai tuoi materiali.", color: "#1a73e8" },
       ],
-      note: "Oggi ognuno userà lo strumento con cui si trova meglio.\nVi daremo un prompt ottimizzato per Claude, Gemini e ChatGPT.",
+      note: "Oggi ognuno userà lo strumento con cui si trova meglio.\nVi darò un prompt ottimizzato per Claude e ChatGPT.",
     },
   },
   // ===== PART 2: FRAMEWORK 4D =====
@@ -234,7 +234,7 @@ const SLIDES = [
     data: {
       icon: "🪞",
       title: "L'IA come specchio professionale",
-      body: "Non vi chiederemo di sedervi e scrivere un documento da zero.\nChiederemo all'IA di intervistarvi, come farebbe un collega curioso\nche vuole capire davvero come lavorate.\n\nQuesto è Descrizione + Discernimento in azione.",
+      body: "Non vi chiedo di sedervi e scrivere un documento da zero.\nChiedo all'IA di intervistarvi, come farebbe un collega curioso\nche vuole capire davvero come lavorate.\n\nQuesto è Descrizione + Discernimento in azione.",
       highlight: "L'IA vi fa le domande giuste per far emergere\nciò che sapete già ma non avete mai messo nero su bianco:\nla vostra filosofia, i vostri metodi, i vincoli con cui convivete.\n\nVoi valutate ogni riformulazione, correggete, approfondite.\nIl risultato è un documento che vi rappresenta davvero.",
     },
   },
@@ -255,9 +255,9 @@ const SLIDES = [
       title: "Come funziona l'esercitazione",
       steps: [
         { num: "1", text: "Aprite il vostro strumento IA preferito (ChatGPT, Gemini o Claude)" },
-        { num: "2", text: "Incollate il prompt che vi daremo — ne abbiamo preparato uno per ciascun modello" },
+        { num: "2", text: "Incollate il prompt che vi darò — ne ho preparato una versione per Claude e una per ChatGPT" },
         { num: "3", text: "Lasciatevi intervistare: l'IA vi farà una domanda alla volta, con calma" },
-        { num: "4", text: "Rispondete con onesta. Se una domanda vi mette in difficolta, e un buon segno: state scavando" },
+        { num: "4", text: "Rispondete con onestà. Se una domanda vi mette in difficoltà, è un buon segno: state scavando" },
         { num: "5", text: "Alla fine l'IA sintetizzerà tutto in un Documento di Contesto strutturato" },
         { num: "6", text: "Rileggete con occhio critico (Discernimento!) e correggete ciò che non vi rappresenta" },
       ],
@@ -273,7 +273,7 @@ const SLIDES = [
         { icon: "🐢", label: "Lentezza", text: "Non è una gara. L'obiettivo è lasciarsi guidare dall'IA per far emergere aspetti della propria didattica che di solito restano impliciti. Prendetevi il tempo che serve." },
         { icon: "🧠", label: "Discernimento", text: "Il documento finale è VOSTRO, non dell'IA. Se ha frainteso un valore pedagogico, se ha usato un tono che non vi rappresenta: correggetelo. Questo è Discernimento in azione." },
         { icon: "🔒", label: "Privacy", text: "Siate specifici negli esempi per ottenere un contesto ricco, ma non inserite mai dati sensibili o nomi reali degli studenti. Usate descrizioni generiche." },
-        { icon: "💡", label: "Flessibilità", text: "E normale se alcuni aspetti della vostra pratica sono difficili da articolare. Il bello del processo e proprio questo: rendere esplicito ciò che di solito resta nella vostra testa." },
+        { icon: "💡", label: "Flessibilità", text: "È normale se alcuni aspetti della vostra pratica sono difficili da articolare. Il bello del processo è proprio questo: rendere esplicito ciò che di solito resta nella vostra testa." },
       ],
     },
   },
@@ -284,9 +284,9 @@ const SLIDES = [
     data: {
       title: "Scegliete il vostro prompt",
       tools: [
-        { name: "Claude", desc: "Dialogo naturale e fluido. Riformula cio che capisce dopo ogni risposta. Deduce il vostro tono preferito", color: "#d97706" },
-        { name: "Gemini", desc: "Istruzioni piu esplicite e strutturate. Ideale per chi preferisce un percorso guidato passo-passo", color: "#4285f4" },
-        { name: "ChatGPT", desc: "Struttura markdown chiara. Puo fare osservazioni spontanee e collegamenti inaspettati", color: "#10a37f" },
+        { name: "Claude", desc: "Dialogo naturale e fluido. Riformula ciò che capisce dopo ogni risposta. Deduce il tuo tono preferito", color: "#d97706" },
+        { name: "Gemini", desc: "Istruzioni più esplicite e strutturate. Ideale per chi preferisce un percorso guidato passo-passo", color: "#4285f4" },
+        { name: "ChatGPT", desc: "Struttura markdown chiara. Può fare osservazioni spontanee e collegamenti inaspettati", color: "#10a37f" },
       ],
       note: "Tre versioni dello stesso prompt, ottimizzate per il «carattere» di ciascun modello.\nStesso obiettivo, stesso output finale. Scegliete quello con cui lavorate di solito.",
     },
@@ -296,6 +296,7 @@ const SLIDES = [
     layout: "prompt",
     part: 2,
     data: {
+      title: "Punti chiave del prompt",
       model: "Claude",
       color: "#d97706",
       preview: [
@@ -310,48 +311,12 @@ const SLIDES = [
     },
   },
   {
-    id: "prompt-gemini",
-    layout: "prompt",
-    part: 2,
-    data: {
-      model: "Gemini",
-      color: "#4285f4",
-      preview: [
-        "Sei un esperto Partner di Pensiero Pedagogico.",
-        "UNA domanda alla volta. NON generare liste di domande.",
-        "Conferma in 1-2 frasi ciò che hai capito, poi prosegui.",
-        "NON scrivere il documento prima del mio esplicito OK.",
-        "Esplora le 4D del framework AI Fluency + confini dell'IA.",
-        "Se rispondo in modo generico → chiedi un esempio concreto.",
-        "Documento finale in markdown strutturato, pronto da copiare.",
-      ],
-    },
-  },
-  {
-    id: "prompt-chatgpt",
-    layout: "prompt",
-    part: 2,
-    data: {
-      model: "ChatGPT",
-      color: "#10a37f",
-      preview: [
-        "Sei un esperto Partner di Pensiero Pedagogico.",
-        "Una sola domanda alla volta — mai elenchi di domande.",
-        "Riassumi in max 2 frasi, poi fai la domanda successiva.",
-        "Se emerge qualcosa di interessante, fermati ad esplorarlo.",
-        "Puoi fare osservazioni spontanee, poi torna all'intervista.",
-        "Almeno 8 scambi prima di generare il documento.",
-        "Formato markdown pulito, pronto da copiare-incollare.",
-      ],
-    },
-  },
-  {
     id: "handson",
     layout: "transition",
     part: 2,
     data: {
       label: "HANDS-ON",
-      title: "E il vostro turno",
+      title: "È il vostro turno",
       subtitle: "45 minuti · Aprite il vostro strumento · Incollate il prompt · Lasciatevi guidare dall'intervista",
     },
   },
@@ -430,11 +395,11 @@ function CenteredSlide({ data }) {
     <div style={{
       height: "100%", display: "flex", flexDirection: "column",
       justifyContent: "center", alignItems: "center", textAlign: "center",
-      padding: "60px 80px", background: C.cream,
+      padding: "36px 60px", background: C.cream,
     }}>
       {data.icon && <div style={{ fontSize: "3.5rem", marginBottom: 16 }}>{data.icon}</div>}
       <h2 style={{
-        fontFamily: FONT.display, fontSize: "clamp(2rem, 3.5vw, 3rem)",
+        fontFamily: FONT.display, fontSize: "clamp(2.2rem, 3.8vw, 3.3rem)",
         color: C.navy, margin: "0 0 24px", fontWeight: 700, lineHeight: 1.2,
       }}>{data.title}</h2>
       <p style={{
@@ -461,15 +426,15 @@ function Grid4Slide({ data }) {
   return (
     <div style={{
       height: "100%", display: "flex", flexDirection: "column",
-      padding: "50px 60px", background: C.cream,
+      padding: "28px 44px", background: C.cream,
     }}>
       <h2 style={{
-        fontFamily: FONT.display, fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
-        color: C.navy, margin: "0 0 40px", fontWeight: 700,
+        fontFamily: FONT.display, fontSize: "clamp(2rem, 3.2vw, 2.8rem)",
+        color: C.navy, margin: "0 0 22px", fontWeight: 700,
       }}>{data.title}</h2>
       <div style={{
         display: "grid", gridTemplateColumns: "1fr 1fr",
-        gap: 20, flex: 1,
+        gap: 14, flex: 1,
       }}>
         {data.items.map((item, i) => (
           <div key={i} style={{
@@ -490,7 +455,7 @@ function Grid4Slide({ data }) {
               margin: "0 0 8px", fontWeight: 700, whiteSpace: "pre-line", lineHeight: 1.3,
             }}>{item.label}</h3>
             <p style={{
-              fontFamily: FONT.body, fontSize: "0.9rem",
+              fontFamily: FONT.body, fontSize: "1rem",
               color: item.active ? `${C.white}cc` : C.grayDark,
               margin: 0, lineHeight: 1.5,
             }}>{item.desc}</p>
@@ -505,11 +470,11 @@ function SplitSlide({ data }) {
   return (
     <div style={{
       height: "100%", display: "flex", flexDirection: "column",
-      padding: "50px 60px", background: C.cream,
+      padding: "28px 44px", background: C.cream,
     }}>
       <h2 style={{
-        fontFamily: FONT.display, fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
-        color: C.navy, margin: "0 0 40px", fontWeight: 700,
+        fontFamily: FONT.display, fontSize: "clamp(2rem, 3.2vw, 2.8rem)",
+        color: C.navy, margin: "0 0 22px", fontWeight: 700,
       }}>{data.title}</h2>
       <div style={{ display: "flex", gap: 24, flex: 1 }}>
         {[data.left, data.right].map((side, i) => (
@@ -525,7 +490,7 @@ function SplitSlide({ data }) {
               color: C.navy, margin: "0 0 16px", fontWeight: 700,
             }}>{side.heading}</h3>
             <p style={{
-              fontFamily: FONT.body, fontSize: "1.05rem",
+              fontFamily: FONT.body, fontSize: "1.1rem",
               color: C.text, whiteSpace: "pre-line", lineHeight: 1.7, flex: 1,
             }}>{side.text}</p>
             <span style={{
@@ -543,10 +508,10 @@ function BulletsSlide({ data }) {
   return (
     <div style={{
       height: "100%", display: "flex", flexDirection: "column",
-      padding: "50px 60px", background: C.cream,
+      padding: "28px 44px", background: C.cream,
     }}>
       <h2 style={{
-        fontFamily: FONT.display, fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
+        fontFamily: FONT.display, fontSize: "clamp(2rem, 3.2vw, 2.8rem)",
         color: C.navy, margin: 0, fontWeight: 700,
       }}>{data.title}</h2>
       {data.subtitle && <p style={{
@@ -611,11 +576,11 @@ function CompareSlide({ data }) {
   return (
     <div style={{
       height: "100%", display: "flex", flexDirection: "column",
-      padding: "50px 60px", background: C.cream,
+      padding: "28px 44px", background: C.cream,
     }}>
       <h2 style={{
-        fontFamily: FONT.display, fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
-        color: C.navy, margin: "0 0 36px", fontWeight: 700,
+        fontFamily: FONT.display, fontSize: "clamp(2rem, 3.2vw, 2.8rem)",
+        color: C.navy, margin: "0 0 20px", fontWeight: 700,
       }}>{data.title}</h2>
       <div style={{ display: "flex", gap: 24, flex: 1 }}>
         {[data.left, data.right].map((side, i) => (
@@ -635,7 +600,7 @@ function CompareSlide({ data }) {
               background: C.white, display: "flex", flexDirection: "column",
             }}>
               <div style={{
-                fontFamily: FONT.mono, fontSize: "0.9rem",
+                fontFamily: FONT.mono, fontSize: "1rem",
                 background: `${C.navy}08`, borderRadius: 8, padding: "16px",
                 color: C.navy, whiteSpace: "pre-line", lineHeight: 1.6,
                 marginBottom: 16,
@@ -657,10 +622,10 @@ function FrameworkSlide({ data }) {
   return (
     <div style={{
       height: "100%", display: "flex", flexDirection: "column",
-      padding: "50px 60px", background: C.cream,
+      padding: "28px 44px", background: C.cream,
     }}>
       <h2 style={{
-        fontFamily: FONT.display, fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
+        fontFamily: FONT.display, fontSize: "clamp(2rem, 3.2vw, 2.8rem)",
         color: C.navy, margin: 0, fontWeight: 700,
       }}>{data.title}</h2>
       <p style={{
@@ -669,7 +634,7 @@ function FrameworkSlide({ data }) {
       }}>{data.subtitle}</p>
       <div style={{
         display: "grid", gridTemplateColumns: "1fr 1fr",
-        gap: 16, flex: 1,
+        gap: 12, flex: 1,
       }}>
         {data.dimensions.map((d, i) => (
           <div key={i} style={{
@@ -693,7 +658,7 @@ function FrameworkSlide({ data }) {
                 {d.word.slice(1)}
               </h3>
               <p style={{
-                fontFamily: FONT.body, fontSize: "0.95rem",
+                fontFamily: FONT.body, fontSize: "1.1rem",
                 color: C.grayDark, margin: 0, lineHeight: 1.5,
               }}>{d.desc}</p>
             </div>
@@ -709,7 +674,7 @@ function QuoteSlide({ data }) {
     <div style={{
       height: "100%", display: "flex", flexDirection: "column",
       justifyContent: "center", alignItems: "center", textAlign: "center",
-      padding: "60px 80px", background: C.navy,
+      padding: "36px 60px", background: C.navy,
       position: "relative",
     }}>
       <div style={{
@@ -727,7 +692,7 @@ function QuoteSlide({ data }) {
         margin: "28px 0 16px", borderRadius: 2,
       }} />
       <p style={{
-        fontFamily: FONT.body, fontSize: "0.95rem",
+        fontFamily: FONT.body, fontSize: "1.1rem",
         color: C.orange, fontWeight: 500,
       }}>{data.attribution}</p>
     </div>
@@ -738,11 +703,11 @@ function StepsSlide({ data }) {
   return (
     <div style={{
       height: "100%", display: "flex", flexDirection: "column",
-      padding: "50px 60px", background: C.cream,
+      padding: "28px 44px", background: C.cream,
     }}>
       <h2 style={{
-        fontFamily: FONT.display, fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
-        color: C.navy, margin: "0 0 36px", fontWeight: 700,
+        fontFamily: FONT.display, fontSize: "clamp(2rem, 3.2vw, 2.8rem)",
+        color: C.navy, margin: "0 0 20px", fontWeight: 700,
       }}>{data.title}</h2>
       <div style={{ display: "flex", flexDirection: "column", gap: 12, flex: 1, justifyContent: "center" }}>
         {data.steps.map((s, i) => (
@@ -753,7 +718,7 @@ function StepsSlide({ data }) {
               minWidth: 44, height: 44, borderRadius: "50%",
               background: C.navy, display: "flex",
               alignItems: "center", justifyContent: "center",
-              fontFamily: FONT.mono, fontSize: "0.9rem",
+              fontFamily: FONT.mono, fontSize: "1rem",
               color: C.orange, fontWeight: 700,
             }}>{s.num}</div>
             {i < data.steps.length - 1 && (
@@ -763,7 +728,7 @@ function StepsSlide({ data }) {
               }} />
             )}
             <p style={{
-              fontFamily: FONT.body, fontSize: "1.15rem",
+              fontFamily: FONT.body, fontSize: "1.25rem",
               color: C.text, margin: 0, fontWeight: 500,
             }}>{s.text}</p>
           </div>
@@ -777,15 +742,15 @@ function TipsSlide({ data }) {
   return (
     <div style={{
       height: "100%", display: "flex", flexDirection: "column",
-      padding: "50px 60px", background: C.cream,
+      padding: "28px 44px", background: C.cream,
     }}>
       <h2 style={{
-        fontFamily: FONT.display, fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
-        color: C.navy, margin: "0 0 32px", fontWeight: 700,
+        fontFamily: FONT.display, fontSize: "clamp(2rem, 3.2vw, 2.8rem)",
+        color: C.navy, margin: "0 0 18px", fontWeight: 700,
       }}>{data.title}</h2>
       <div style={{
         display: "grid", gridTemplateColumns: "1fr 1fr",
-        gap: 16, flex: 1,
+        gap: 12, flex: 1,
       }}>
         {data.tips.map((t, i) => (
           <div key={i} style={{
@@ -800,7 +765,7 @@ function TipsSlide({ data }) {
               }}>{t.label}</h3>
             </div>
             <p style={{
-              fontFamily: FONT.body, fontSize: "0.95rem",
+              fontFamily: FONT.body, fontSize: "1.1rem",
               color: C.grayDark, margin: 0, lineHeight: 1.6,
             }}>{t.text}</p>
           </div>
@@ -814,11 +779,11 @@ function ToolsSlide({ data }) {
   return (
     <div style={{
       height: "100%", display: "flex", flexDirection: "column",
-      padding: "50px 60px", background: C.cream,
+      padding: "28px 44px", background: C.cream,
     }}>
       <h2 style={{
-        fontFamily: FONT.display, fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
-        color: C.navy, margin: "0 0 28px", fontWeight: 700,
+        fontFamily: FONT.display, fontSize: "clamp(2rem, 3.2vw, 2.8rem)",
+        color: C.navy, margin: "0 0 16px", fontWeight: 700,
       }}>{data.title}</h2>
       <div style={{ display: "flex", gap: 16, flex: 1 }}>
         {data.tools.map((t, i) => (
@@ -834,7 +799,7 @@ function ToolsSlide({ data }) {
               color: C.navy, margin: "0 0 10px", fontWeight: 700,
             }}>{t.name}</h3>
             <p style={{
-              fontFamily: FONT.body, fontSize: "0.95rem",
+              fontFamily: FONT.body, fontSize: "1.1rem",
               color: C.grayDark, margin: 0, lineHeight: 1.5,
             }}>{t.desc}</p>
           </div>
@@ -842,7 +807,7 @@ function ToolsSlide({ data }) {
       </div>
       {data.note && (
         <p style={{
-          fontFamily: FONT.body, fontSize: "0.9rem",
+          fontFamily: FONT.body, fontSize: "1rem",
           color: C.grayDark, textAlign: "center", marginTop: 20,
           whiteSpace: "pre-line", lineHeight: 1.6,
         }}>{data.note}</p>
@@ -855,7 +820,7 @@ function PromptSlide({ data }) {
   return (
     <div style={{
       height: "100%", display: "flex", flexDirection: "column",
-      padding: "50px 60px", background: C.cream,
+      padding: "28px 44px", background: C.cream,
     }}>
       <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 24 }}>
         <div style={{
@@ -863,9 +828,9 @@ function PromptSlide({ data }) {
           background: data.color,
         }} />
         <h2 style={{
-          fontFamily: FONT.display, fontSize: "clamp(1.5rem, 2.5vw, 2rem)",
+          fontFamily: FONT.display, fontSize: "clamp(1.7rem, 2.8vw, 2.2rem)",
           color: C.navy, margin: 0, fontWeight: 700,
-        }}>Prompt per {data.model}</h2>
+        }}>{data.title || `Prompt per ${data.model}`}</h2>
       </div>
       <div style={{
         flex: 1, background: C.navy, borderRadius: 16,

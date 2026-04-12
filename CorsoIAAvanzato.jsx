@@ -563,7 +563,7 @@ function SpectrumSlide({ slide }) {
   return (
     <div style={{
       display: "flex", flexDirection: "column", height: "100%",
-      padding: "2.5rem 3rem", background: C.cream,
+      padding: "1.4rem 2.2rem", background: C.cream,
     }}>
       <h2 style={{
         fontFamily: "'EB Garamond'", fontSize: "2rem", fontWeight: 700,
@@ -660,7 +660,7 @@ function Block({ block }) {
           color: C.navy, marginBottom: "0.4rem",
         }}>{block.icon} {block.title}</div>
         <div style={{
-          fontFamily: "'DM Sans'", fontSize: "0.9rem", color: C.navyLight,
+          fontFamily: "'DM Sans'", fontSize: "1rem", color: C.navyLight,
           lineHeight: 1.6,
         }}>{block.text}</div>
       </div>
@@ -691,7 +691,7 @@ function Block({ block }) {
               color: C.navy, marginBottom: "0.4rem",
             }}>{card.title}</div>
             <div style={{
-              fontFamily: "'DM Sans'", fontSize: "0.8rem", color: C.navyLight,
+              fontFamily: "'DM Sans'", fontSize: "0.9rem", color: C.navyLight,
               lineHeight: 1.5,
             }}>{card.text}</div>
           </div>
@@ -725,7 +725,7 @@ function ContentSlide({ slide }) {
   return (
     <div style={{
       display: "flex", flexDirection: "column", height: "100%",
-      padding: "2.5rem 3rem", background: C.cream,
+      padding: "1.4rem 2.2rem", background: C.cream,
     }}>
       <h2 style={{
         fontFamily: "'EB Garamond'", fontSize: "1.8rem", fontWeight: 700,
@@ -742,7 +742,7 @@ function ToolsGridSlide({ slide }) {
   return (
     <div style={{
       display: "flex", flexDirection: "column", height: "100%",
-      padding: "2rem 3rem", background: C.cream,
+      padding: "1.4rem 2.2rem", background: C.cream,
     }}>
       <h2 style={{
         fontFamily: "'EB Garamond'", fontSize: "1.8rem", fontWeight: 700,
@@ -791,7 +791,7 @@ function DemoSlide({ slide }) {
   return (
     <div style={{
       display: "flex", flexDirection: "column", justifyContent: "center",
-      height: "100%", padding: "2.5rem 4rem",
+      height: "100%", padding: "1.5rem 3rem",
       background: `linear-gradient(160deg, ${C.dark} 0%, ${C.navy} 100%)`,
     }}>
       <div style={{
@@ -840,7 +840,7 @@ function ExerciseSlide({ slide }) {
   return (
     <div style={{
       display: "flex", flexDirection: "column", height: "100%",
-      padding: "2.5rem 3rem",
+      padding: "1.4rem 2.2rem",
       background: `linear-gradient(135deg, ${C.cream} 0%, ${C.creamDark} 100%)`,
     }}>
       <div style={{
@@ -876,7 +876,7 @@ function ExerciseSlide({ slide }) {
           {slide.suggestions.map((s, i) => (
             <div key={i} style={{
               display: "flex", alignItems: "center", gap: "0.5rem",
-              fontFamily: "'DM Sans'", fontSize: "0.85rem", color: C.navyLight,
+              fontFamily: "'DM Sans'", fontSize: "0.95rem", color: C.navyLight,
             }}>
               <span style={{
                 width: "6px", height: "6px", borderRadius: "50%",
@@ -895,7 +895,7 @@ function FlowSlide({ slide }) {
   return (
     <div style={{
       display: "flex", flexDirection: "column", height: "100%",
-      padding: "2.5rem 3rem", background: C.cream,
+      padding: "1.4rem 2.2rem", background: C.cream,
     }}>
       <h2 style={{
         fontFamily: "'EB Garamond'", fontSize: "1.8rem", fontWeight: 700,
@@ -942,7 +942,7 @@ function AgentsTableSlide({ slide }) {
   return (
     <div style={{
       display: "flex", flexDirection: "column", height: "100%",
-      padding: "2rem 2.5rem", background: C.cream,
+      padding: "1.2rem 2rem", background: C.cream,
     }}>
       <h2 style={{
         fontFamily: "'EB Garamond'", fontSize: "1.8rem", fontWeight: 700,
@@ -963,7 +963,7 @@ function AgentsTableSlide({ slide }) {
               fontFamily: "'DM Sans'", fontWeight: 700, fontSize: "0.95rem",
             }}>{agent.name}</div>
             <div style={{
-              fontFamily: "'DM Sans'", fontSize: "0.8rem", lineHeight: 1.4,
+              fontFamily: "'DM Sans'", fontSize: "0.9rem", lineHeight: 1.4,
               opacity: 0.85,
             }}>{agent.what}</div>
             <div style={{
