@@ -106,7 +106,7 @@ export default function App() {
           marginBottom: "1rem",
         }}
       >
-        Corso IA Avanzato · IIS Carlo Piaggia · Viareggio
+        Corso IA Avanzato · ISI Piaggia · Viareggio
       </div>
 
       <h1

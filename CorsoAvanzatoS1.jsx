@@ -50,12 +50,12 @@ const SLIDES = [
     part: 1,
     data: {
       title: "Cosa ci dice il sondaggio",
-      subtitle: "Prime tendenze dalle vostre risposte (sondaggio ancora aperto)",
+      subtitle: "25 risposte — grazie! Ecco il quadro del gruppo",
       items: [
-        "ChatGPT e Gemini sono i vostri compagni di viaggio principali — quasi tutti li usate regolarmente. Qualcuno ha scoperto anche Claude, Perplexity e NotebookLM",
-        "Nessuno ha un abbonamento a pagamento: lavorate tutti con le versioni gratuite, il che dimostra che si possono ottenere risultati anche senza spendere",
-        "Usate l'IA soprattutto per creare verifiche, cercare informazioni, generare materiali e semplificare testi. Usi concreti e pragmatici — ottimo punto di partenza",
-        "La maggior parte di voi organizza i propri materiali su Google Drive; alcuni non usano nessun sistema di organizzazione digitale. Ne riparleremo nelle prossime lezioni",
+        "ChatGPT e Google Gemini dominano: presenti nell'80% delle risposte. Claude e NotebookLM sono stati scoperti solo da 4 persone ciascuno — c'è ancora molto da esplorare insieme.",
+        "21 su 25 lavorano solo con versioni gratuite. Solo 4 persone pagano (ChatGPT Plus). Dimostrazione concreta che non serve investire per ottenere risultati reali.",
+        "Usi più diffusi: creare verifiche ed esercizi, cercare informazioni, generare materiali didattici. Pragmatici ed efficaci — esattamente il punto di partenza giusto.",
+        "Quasi un terzo di voi (8 su 25) non usa nessun sistema per organizzare i materiali digitali. E solo 3 persone hanno mai fatto generare codice all'IA. Questo cambia oggi.",
       ],
     },
   },

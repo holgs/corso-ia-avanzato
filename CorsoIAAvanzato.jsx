@@ -23,7 +23,7 @@ const LEZIONE_2 = [
     title: "Costruire con l'IA",
     subtitle: "Dal chatbot al vibe coding",
     date: "15 aprile 2026",
-    footer: "IIS Carlo Piaggia — Viareggio",
+    footer: "ISI Piaggia — Viareggio",
   },
   /* 1 */ {
     type: "section",
@@ -67,8 +67,8 @@ const LEZIONE_2 = [
   /* 3 */ {
     type: "question",
     title: "Voi dove vi siete fermati?",
-    subtitle: "Risultati dal form di pre-lezione",
-    note: "→ Mostrare qui i risultati del Google Form",
+    subtitle: "Dal vostro sondaggio pre-corso",
+    note: "Solo 3 su 25 hanno mai fatto generare codice all'IA. Il 97% parte da zero. Partiamo da qui.",
   },
   /* 4 */ {
     type: "section",
@@ -210,7 +210,7 @@ const LEZIONE_3 = [
     title: "L'IA che lavora\nper te",
     subtitle: "Conoscenza, skill, agenti",
     date: "22 aprile 2026",
-    footer: "IIS Carlo Piaggia — Viareggio",
+    footer: "ISI Piaggia — Viareggio",
   },
   /* 1 */ {
     type: "section",
@@ -497,7 +497,6 @@ const LEZIONE_3 = [
     date: "Prossime lezioni",
     items: [
       "🔧 Approfondimento skill e custom GPT/Gems",
-      "🔗 Automazioni con IA (n8n, make.com)",
       "🎯 Progetto personale di ciascun docente",
     ],
   },
