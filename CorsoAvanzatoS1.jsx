@@ -50,12 +50,12 @@ const SLIDES = [
     part: 1,
     data: {
       title: "Cosa ci dice il sondaggio",
-      subtitle: "25 risposte — grazie! Ecco il quadro del gruppo",
+      subtitle: "30 risposte — grazie! Ecco il quadro del gruppo",
       items: [
-        "ChatGPT e Google Gemini dominano: presenti nell'80% delle risposte. Claude e NotebookLM sono stati scoperti solo da 4 persone ciascuno — c'è ancora molto da esplorare insieme.",
-        "21 su 25 lavorano solo con versioni gratuite. Solo 4 persone pagano (ChatGPT Plus). Dimostrazione concreta che non serve investire per ottenere risultati reali.",
-        "Usi più diffusi: creare verifiche ed esercizi, cercare informazioni, generare materiali didattici. Pragmatici ed efficaci — esattamente il punto di partenza giusto.",
-        "Quasi un terzo di voi (8 su 25) non usa nessun sistema per organizzare i materiali digitali. E solo 3 persone hanno mai fatto generare codice all'IA. Questo cambia oggi.",
+        "ChatGPT (25) e Google Gemini (22) dominano nettamente. Claude è arrivato a 5 persone e NotebookLM a 7 — c'è ancora molto da esplorare insieme.",
+        "26 su 30 lavorano solo con versioni gratuite. Solo 4 persone pagano (ChatGPT Plus). Dimostrazione concreta che non serve investire per ottenere risultati reali.",
+        "Usi più diffusi: creare verifiche ed esercizi, cercare informazioni e generare materiali (21 risposte ciascuno). 15 di voi lo usano già per preparare lezioni. Pragmatici ed efficaci.",
+        "11 su 30 non usano nessun sistema per organizzare i materiali digitali. E solo 3 su 30 hanno mai fatto generare codice all'IA. Su entrambi i fronti, questo corso cambia le cose.",
       ],
     },
   },
